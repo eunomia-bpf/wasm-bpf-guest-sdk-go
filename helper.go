@@ -14,6 +14,10 @@ func PerfBufferPoll(int64, int32, int32, int32, int32, int32) int32
 func WasmAttachBpfProgram(int64, int32, int32) int32
 
 //go:wasm-module wasm_bpf
+//export wasm_attach_bpf_program_fd
+func WasmAttachBpfProgramFd(int64, int32, int32) int32
+
+//go:wasm-module wasm_bpf
 //export wasm_load_bpf_object
 func WasmLoadBpfObject(int32, int32) int64
 
